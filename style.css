@@ -1,0 +1,35 @@
+.nav{
+    background-color:#ffe0e9;
+}
+.nav a{
+    color: #b9375e;
+    float: right;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+.home{
+    background-image: url('https://media-hosting.imagekit.io//221508f2b0c7457a/websiteImg.png?Expires=1837196635&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=SBvuRbqzAHuS7utVb5pX1JzM50nAK1lFpdCj91BZV-xkzGgMtm4kUVqv8vP9oBnPm~6xBRPx3THCFR82G-g9ov29HjwFeK4aXlMtwpLLmvCATQ9M~UbLkBIc9Ae~K7Xymo7vzhDogaJIwZZ1sXb~UWXm18qg6kEJJo4lSj2niByzewt13I89N9EA1WzzVs2wBUt4BwJ-BoemNHwJG0r1G258jfYjsbBh8S-zChgZWeAOjKTTdVYU0O26BUl9n7TXSAAL8gh-2fItEDs-aSRgYwza2VzUQoozVufZhZl-n6B04QIXYSiAhujiO70sBu~UC7e8UmgFftkr-M~VSNGzZQ__'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    body{
+    font-family:'Raleway';
+}
+    h1, h2{
+    color:#b9375e;
+    font-family: 'Lilita One';
+}
+    h3{
+    color:#b9375e; 
+}
+    .links{
+    color:#b9375e;
+        display: flex;
+    gap: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px; 
+}
