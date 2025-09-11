@@ -1,26 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
     <title>Savannah Green</title>
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="stylesheet" href="./style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Gravitas+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
 </head>
 <body class = "home">
     <div class ="nav">
-    <a href="coursework.html">Related Coursework</a>
-    <a href="skills.html">Skills</a>
-    <a href="workExperience.html">Work Experience</a>
-    <a href="https://acrobat.adobe.com/id/urn:aaid:sc:US:d6edfb1f-1f40-4450-a7db-d7a405fe8bef">Resume</a>
+        <img src="headshot.jpg" alt="headshot" class="headshot">
+        <h3>Savannah Green</h3>
+        <a href="coursework.html">Related Coursework</a>
+        <a href="skills.html">Skills</a>
+        <a href="workExperience.html">Work Experience</a>
+        <a href="resume.pdf">Resume</a>
+        <a href="projects.html">Projects</a>
     </div>
-    <h1>Savannah Green</h1>
-        <div class="links">
+
+        <div class="img-slide-container">
+        <img src="headshot.jpg" alt="headshot" class="img-slide">
+        <h1 id="intro"></h1>
+    </div>
+
+    <div class="description">
+        <p>I am a recent computer science graduate with a strong passion for front-end development and creating user-friendly
+            experiences. I am eager to contribute to innovative development teams and play a role in delivering
+            impactful web applications, while following the best practices in software testing. I am actively seeking roles
+            in
+            <ul>
+                <li>Front-End Development</li>
+                <li>UX/UI Development</li>
+                <li>Software Engineering/Development</li>
+                <li>Full Stack Development</li>
+            </ul>
+        </p>
+    </div>
+
+    <!-- typewriter script -->
+    <script>
+        var i = 0;
+        var txt = 'Hi, I am Savannah Green';
+        var speed = 50;
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("intro").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        window.onload = typeWriter;
+    </script>
+
+
+    <div class = "footer">
+        <h2>Let's Keep In Touch!</h2>
         <a href="https://www.linkedin.com/in/savannah-green-b77b01234/">
             <i class="fab fa-linkedin"></i>
         </a>
@@ -31,12 +72,5 @@
             <i class="fas fa-envelope"></i>
         </a> 
     </div>
-    <p>Hi! I am Savannah Green, a senior computer science student at Towson University. I am currently looking for jobs in:</p>
-    <ul> 
-        <li>Front End Web Development</li>
-        <li>Full Stack Web Development</li>
-        <li>Software Engineering</li>
-        <li>Data Analytics</li>
-    </ul>
 </body>
 </html>

@@ -1,35 +1,432 @@
-.nav{
-    background-color:#ffe0e9;
+/*index*/
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: #daf3ff;
+    padding: 5px 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    gap: 5px;
+    box-sizing: border-box;
+    height: 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
 }
 .nav a{
-    color: #b9375e;
-    float: right;
-    padding: 14px 16px;
-    font-size: 17px;
+    color: #0B1D51;
+    padding: 14px 45px;
+    font-size: 20px;
+    text-decoration:none;
+    justify-content: right;
 }
-.home{
-    background-image: url('https://media-hosting.imagekit.io//221508f2b0c7457a/websiteImg.png?Expires=1837196635&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=SBvuRbqzAHuS7utVb5pX1JzM50nAK1lFpdCj91BZV-xkzGgMtm4kUVqv8vP9oBnPm~6xBRPx3THCFR82G-g9ov29HjwFeK4aXlMtwpLLmvCATQ9M~UbLkBIc9Ae~K7Xymo7vzhDogaJIwZZ1sXb~UWXm18qg6kEJJo4lSj2niByzewt13I89N9EA1WzzVs2wBUt4BwJ-BoemNHwJG0r1G258jfYjsbBh8S-zChgZWeAOjKTTdVYU0O26BUl9n7TXSAAL8gh-2fItEDs-aSRgYwza2VzUQoozVufZhZl-n6B04QIXYSiAhujiO70sBu~UC7e8UmgFftkr-M~VSNGzZQ__'); 
-    background-size: cover;
-    background-repeat: no-repeat;
+/*footer*/
+.footer{
+    margin-top:150px;
+    bottom:0;
+    width:100%;
+    background-color:#daf3ff;
+    z-index:1000;
+    text-align:center;
 }
-    body{
-    font-family:'Raleway';
-}
-    h1, h2{
-    color:#b9375e;
-    font-family: 'Lilita One';
-}
-    h3{
-    color:#b9375e; 
-}
-    .links{
-    color:#b9375e;
-        display: flex;
-    gap: 10px;
+.footer a{
+    margin:0 10px;
+    font-size: 30px;
+    color:#0B1D51;
+    text-decoration:none;
 }
 
-.links a {
+.home h1{
+    font-size: 50px;
+    font-family: "Gravitas One", serif;
+    font-weight: 400;
+    font-style: normal;
+    color:#0B1D51
+}
+/*name and pic in nav bar*/
+    h3, h1{
+    color:#0B1D51; 
+    }
+.headshot{
+    height: 50px;
+    width: 50px;
+    object-fit:cover;
+    border-radius:50%;
+    justify-content: left;
+}
+    body{
+    font-size:20px;
+    padding-top:70px;
+}
+    h2{
+    color:#0B1D51;
+    font-family: "Gravitas One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+ .description{/*favicons*/
+    color:#0B1D51;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom:5px;
     text-decoration: none;
-    color: inherit;
-    font-size: 20px; 
+    font-size: 30px; 
+}
+.script{
+    text-align: center;
+}
+.icons a {
+    text-decoration: none;
+    font-size: 30px;
+    color:#0B1D51;
+    justify-content:center;
+    align-items: center;
+}
+.home p, ul{
+    color:#0B1D51;
+    margin-top:10px;
+    text-align: center;
+}
+body{
+    background-color: #fffbef;
+}
+.img-slide{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    display:block;
+}
+.img-slide-container{
+    position:relative;
+    width:100%;
+}
+#intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fffbef;;
+    font-size: 40px;
+    font-family: "Gravitas One", serif;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    white-space: nowrap;
+}
+.typewriter-text {
+    position: absolute;
+    top: 50%;              
+    left: 50%;             
+    transform: translate(-50%, -50%); 
+    color: #fffbef;       
+    font-size: 60px;    
+    font-family: "Gravitas One", serif;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    white-space: nowrap;
+    z-index: 2;
+}
+
+/* container for relative positioning */
+.img-slide-container {
+    position: relative;
+    width: 100%;
+}
+/*Courses/experience*/
+.pulsing-caret{
+    width: 20px;
+    height: 20px;
+    border: solid #0B1D51;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg); /* Point the arrow down */
+    animation: pulse-arrow 2s infinite ease-in-out;
+}
+@keyframes pulse-arrow {
+  0% {
+    transform: rotate(45deg) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(45deg) scale(1.1); /* Slightly enlarge the caret */
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+    opacity: 0.5;
+  }
+}
+
+/*skills
+animation adapted from logusivam.github.io/CSS_Skill_Bars/*/
+
+/* Container for skill bars */
+.container {
+  width: 100%;
+  background-color: #daf3ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.lang, .Tools{
+    width:500px;
+}
+.h1{
+    color:#0B1D51;
+}
+
+.skills {
+  height: 20px;
+  line-height: 20px;
+  text-align: right;
+  padding-right: 10px;
+  color: #fffbef;
+  border-radius: 8px;
+}
+.skill-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 70px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+
+.HTML {width: 80%; background-color: #0B1D51; animation:HTML 3s;} 
+.CSS {width: 80%; background-color: #0B1D51; animation:CSS 3s;} 
+.JS {width: 70%; background-color: #0B1D51; animation:JS 3s;} 
+.java {width: 80%; background-color: #0B1D51; animation:java 3s;} 
+.c {width: 40%; background-color: #0B1D51; animation:c 3s;}
+.python {width: 60%; background-color: #0B1D51; animation:python 3s;}
+.git {width: 90%; background-color: #0B1D51; animation:git 3s;} 
+.MS {width: 100%; background-color: #0B1D51; animation:MS 3s;}
+.github {width: 80%; background-color: #0B1D51; animation:github 3s;}
+.gitlab {width: 50%; background-color: #0B1D51; animation:gitlab 3s;} 
+.eclipse {width: 60%; background-color: #0B1D51; animation:eclipse 3s;} 
+.WP {width: 40%; background-color:#0B1D51; animation:WP 3s;}
+
+/*animates experience bar*/
+@keyframes HTML{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:80%;
+    }}
+@keyframes CSS{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:80%;
+    }}
+@keyframes JS{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:70%;
+    }}
+@keyframes java{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:80%;
+    }}
+@keyframes c{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:40%;
+    }}
+@keyframes python{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:60%;
+    }}
+@keyframes git{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:90%;
+    }}
+@keyframes MS{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:100%;
+    }}
+@keyframes github{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:80%;
+    }}
+@keyframes gitlab{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:50%;
+    }}
+@keyframes eclipse{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:60%;
+    }}
+@keyframes WP{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:40%;
+    }}
+/*Projects*/
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+img.screenshot {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 10px auto;
+}
+
+.prj-box {
+  background: #daf3ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+}
+.prj-box:hover {
+    transform: translateY(-5px);
+    background-color: #96dafa;
+}
+
+.prj-box h2 {
+    margin-top: 0;
+    color: #0B1D51;
+    font-family: 'Gravitas One', serif;
+    font-size: 20px;
+    text-align: center;
+}
+.prj-box a, p{
+    font-family:serif;
+    text-align:center;
+    text-decoration: none; 
+}
+.prj-description{
+    text-align:center;
+}
+  .liquid-morph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #001;
+}
+/*container = prj-box web-links=liquid-morph-element*/
+.web-link {
+  width: 100px;
+  height: 50px;
+  background: #0a2342;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  float:left;
+  margin-right:15px;
+}
+
+.web-link span {
+  color: #fff;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.web-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.web-link:hover {
+  border-radius: 10px;
+  transform: rotate(15deg);
+}
+
+.web-link:hover::before {
+  opacity: 0.5;
+  transform: scale(2);
+}
+/*done*/
+.git-link {
+  width: 100px;
+  height: 50px;
+  background: #0a2342;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  margin-left:15px;
+}
+
+.git-link span {
+  color: #fff;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.git-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.git-link:hover {
+  border-radius: 10px;
+  transform: rotate(15deg);
+}
+
+.git-link:hover::before {
+  opacity: 0.5;
+  transform: scale(2);
 }
