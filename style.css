@@ -1,8 +1,14 @@
-/*index*/
+html{
+scroll-behavior: smooth;
+}
+body{
+    background: linear-gradient(to bottom, #f9f9f7, #eae0f0);
+}
+
 .nav {
     display: flex;
     align-items: center;
-    background-color: #daf3ff;
+    background-color: #f9f9f7;
     padding: 5px 10px;
     width: 100%;
     position: fixed;
@@ -14,45 +20,28 @@
     height: 60px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family:"serif";
+    justify-content: space-between;
 }
 .nav-links {
     display: flex;
     gap: 25px;
 }
 .nav a{
-    color: #0B1D51;
-    padding: 14px 45px;
-    font-size: 20px;
+    color: #472950;
+    padding: 10px 15px;
+    font-size: 16px;
     text-decoration:none;
     justify-content: right;
-}
-/*footer*/
-.footer{
-    margin-top:150px;
-    bottom:0;
-    width:100%;
-    background-color:#daf3ff;
-    z-index:1000;
-    text-align:center;
-}
-.footer a{
-    margin:0 10px;
-    font-size: 30px;
-    color:#0B1D51;
-    text-decoration:none;
+    font-size:16px;
 }
 
-.home h1{
+h1{
     font-size: 50px;
     font-family: "Gravitas One", serif;
     font-weight: 400;
     font-style: normal;
-    color:#0B1D51
+    color:#472950;
 }
-/*name and pic in nav bar*/
-    h3, h1{
-    color:#0B1D51; 
-    }
 .headshot{
     height: 50px;
     width: 50px;
@@ -65,38 +54,48 @@
     padding-top:70px;
 }
     h2{
-    color:#0B1D51;
+    color:#472950;
     font-family: "Gravitas One", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 30px;
 }
- .description{/*favicons*/
-    color:#0B1D51;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom:5px;
-    text-decoration: none;
-    font-size: 30px; 
+
+/*description and jobs I'm looking for*/
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
 }
-.script{
-    text-align: center;
+
+.hero h2 {
+  font-size: 28px;
+  color: #5c3b7b;
+  margin-bottom: 20px;
 }
-.icons a {
-    text-decoration: none;
-    font-size: 30px;
-    color:#0B1D51;
-    justify-content:center;
-    align-items: center;
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: #472950;
 }
-.home p, ul{
-    color:#0B1D51;
-    margin-top:10px;
-    text-align: center;
+ul, p{
+    color:#472950;
 }
-body{
-    background-color: #fffbef;
+.cta-button {
+  background-color: #472950;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s ease;
 }
+
+.cta-button:hover {
+  background-color: #5c3b7b;
+}
+
 .img-slide{
     width:100%;
     height:400px;
@@ -112,7 +111,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fffbef;;
+    color: #f6eaf8;
     font-size: 40px;
     font-family: "Gravitas One", serif;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
@@ -122,286 +121,336 @@ body{
     position: absolute;
     top: 50%;              
     left: 50%;             
-    transform: translate(-50%, -50%); 
-    color: #fffbef;       
+    transform: translate(-50%, -50%);     
     font-size: 60px;    
     font-family: "Gravitas One", serif;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     white-space: nowrap;
     z-index: 2;
 }
-
-/* container for relative positioning */
-.img-slide-container {
-    position: relative;
-    width: 100%;
-}
-/*Courses/experience*/
-.pulsing-caret{
-    width: 20px;
-    height: 20px;
-    border: solid #0B1D51;
-    border-width: 0 4px 4px 0;
-    transform: rotate(45deg); /* Point the arrow down */
-    animation: pulse-arrow 2s infinite ease-in-out;
-}
-@keyframes pulse-arrow {
-  0% {
-    transform: rotate(45deg) scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: rotate(45deg) scale(1.1); /* Slightly enlarge the caret */
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(45deg) scale(1);
-    opacity: 0.5;
-  }
-}
-
-/*skills
-animation adapted from logusivam.github.io/CSS_Skill_Bars/*/
-
-/* Container for skill bars */
-.container {
-  width: 100%;
-  background-color: #daf3ff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-.lang, .Tools{
-    width:500px;
-}
-.h1{
-    color:#0B1D51;
-}
-
-.skills {
-  height: 20px;
-  line-height: 20px;
-  text-align: right;
-  padding-right: 10px;
-  color: #fffbef;
-  border-radius: 8px;
-}
-.skill-wrap{
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 70px;
-  flex-wrap: wrap;
-  padding: 40px;
+.jobs{
+    list-style: none;
 }
 
 
-.HTML {width: 80%; background-color: #0B1D51; animation:HTML 3s;} 
-.CSS {width: 80%; background-color: #0B1D51; animation:CSS 3s;} 
-.JS {width: 70%; background-color: #0B1D51; animation:JS 3s;} 
-.java {width: 80%; background-color: #0B1D51; animation:java 3s;} 
-.c {width: 40%; background-color: #0B1D51; animation:c 3s;}
-.python {width: 60%; background-color: #0B1D51; animation:python 3s;}
-.git {width: 90%; background-color: #0B1D51; animation:git 3s;} 
-.MS {width: 100%; background-color: #0B1D51; animation:MS 3s;}
-.github {width: 80%; background-color: #0B1D51; animation:github 3s;}
-.gitlab {width: 50%; background-color: #0B1D51; animation:gitlab 3s;} 
-.eclipse {width: 60%; background-color: #0B1D51; animation:eclipse 3s;} 
-.WP {width: 40%; background-color:#0B1D51; animation:WP 3s;}
+/*Skills*/
+.skills{
+    scroll-margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-/*animates experience bar*/
-@keyframes HTML{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:80%;
-    }}
-@keyframes CSS{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:80%;
-    }}
-@keyframes JS{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:70%;
-    }}
-@keyframes java{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:80%;
-    }}
-@keyframes c{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:40%;
-    }}
-@keyframes python{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:60%;
-    }}
-@keyframes git{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:90%;
-    }}
-@keyframes MS{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:100%;
-    }}
-@keyframes github{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:80%;
-    }}
-@keyframes gitlab{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:50%;
-    }}
-@keyframes eclipse{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:60%;
-    }}
-@keyframes WP{
-    0%{
-        width:0%;
-    }
-    100%{
-        width:40%;
-    }}
-
-/*Projects*/
-.project-images, .cheer-images {
+.skills_list{
+    list-style: none;
+    padding-left:0;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills_list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #c0a4c4;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color:#ffffff
+}
+
+.skills_list li:hover {
+  background: #472950;
+  color: white;
+}
+
+.skills_list i {
+  font-size: 18px;
+}
+
+.job_list{
+    text-align:left
+}
+h4{
+    color:#472950;
+    margin-bottom: 0;
+}
+h3{
+    color:#472950;
+    margin-bottom: 0;
+}
+
+/*projects section*/
+.projects {
+    scroll-margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
     justify-content: center;
-    gap: 15px;
-    margin: 10px;
+    gap: 30px;
+    padding: 20px 0;
 }
 
-.project-images img.screenshot,
-.cheer-images img.screenshot {
-    width: 400px;
+.project-card{
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    border:2px solid transparent;
+    transition: transform 0.2s ease;
+    align-items: center;
+}
+.project-card:hover {
+  border-color:#472950;
+  background-color:#c0a4c493;
+}
+.project-card .project-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.cheer-img{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cheer-img img {
+    height: 120px;
+    max-height: 120px;
+    width: auto;
+    max-width: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.cheer-img img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 500px) {
+    .cheer-img img {
+        height: 90px;
+        max-width: 120px;
+    }
+}
+
+.cheer-closeup{
+    height: 150px;
+    width: auto;
+}
+.project-card .buttons a {
+  margin-right: 8px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid #472950;
+  text-decoration: none;
+  color: #472950;
+  transition: 0.2s ease;
+}
+
+.project-card .buttons a:hover {
+  background: #472950;
+  color: white;
+}
+.project-card .tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.tech li{
+    display: inline-flex;
+    flex-wrap:wrap;
+    align-items: center;
+    gap: 8px;
+    background: #c0a4c4;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 999px;
+    color:#472950;
+    width:fit-content;
+}
+
+/*Experience*/
+.experience h3, .experience h4{
+    margin-bottom: 5px;
+}
+
+.job_list{
+    margin-bottom:20px;
+    text-align: left;
+
+}
+.experience{
+    scroll-margin-top: 80px;
+}
+
+/*footer*/
+.footer{
+    margin-top:150px;
+    bottom:0;
+    width:100%;
+    background-color:#eae0f0;
+    z-index:1000;
+    text-align:center;
+}
+.footer a{
+    margin:0 10px;
+    font-size: 30px;
+    color:#c0a4c4;
+    text-decoration:none;
+}
+
+.footer a:hover {
+  color: #472950;
+  transform: scale(1.1);
+  transition: 0.2s ease;
+}
+
+/*Graphic Design Close up Page*/
+.header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    font-family: "Gravitas One", serif;
+    font-size: 48px;
+    color: #472950;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+    color: #5c3b7b;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px 10px;
+    justify-items: center;
+}
+
+.gallery-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    text-align: center;
+}
+
+.gallery-card img {
+    width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
-    margin: 10px;
-    transition: transform 0.2s;
 }
 
-.cheer-images img.screenshot {
-    width: 200px;
+.gallery-card p {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #472950;
+    font-weight: 500;
 }
 
-.project-images img.screenshot:hover,
-.cheer-images img.screenshot:hover {
-    transform: scale(1.5);
+.lightbox{
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
 }
 
-
-.button-links{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:20px;
-    font-size: 15px;
+/* Enlarged image */
+.lightbox-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 10px;
 }
 
-  .liquid-morph-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #001;
-}
-.web-link, .git-link {
-  width: auto;
-  min-width: 120px;
-  height: 50px;
-  background: #0a2342;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-radius: 50px;
-  overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  float:left;
-    margin-top:15px;
-  margin-bottom:15px;
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.web-link span, .git-link span {
-  color: #fff;
-  font-size: 20px;
-  position: relative;
-  font-family: "serif";
-  white-space:nowrap;
+.footer {
+    text-align: center;
+    margin-top: 50px;
 }
 
-.web-link::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.6s ease;
-  opacity: 0;
-  transform: scale(0);
+.back-button {
+    text-decoration: none;
+    color: white;
+    background-color: #472950;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s ease;
 }
 
-.web-link:hover {
-  border-radius: 10px;
-  transform: rotate(15deg);
+.back-button:hover {
+    background-color: #5c3b7b;
 }
 
-.web-link:hover::before {
-  opacity: 0.5;
-  transform: scale(2);
+/*Skills*/
+.coursework{
+    scroll-margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.git-link::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.6s ease;
-  opacity: 0;
-  transform: scale(0);
-}
+/*Mobile CSS*/
+@media (max-width: 600px) {
 
-.git-link:hover {
-  border-radius: 10px;
-  transform: rotate(15deg);
-}
+    /* Smaller header text */
+    .header h1 {
+        font-size: 32px; /* CHANGE: prevent huge text on phones */
+    }
 
-.git-link:hover::before {
-  opacity: 0.5;
-  transform: scale(2);
+    .header p {
+        font-size: 16px;
+    }
+
+    /* Reduce spacing */
+    .header {
+        padding: 20px 10px;
+    }
+
+    /* Make cards tighter */
+    .gallery {
+        gap: 15px;
+    }
+
+    /* Improve tap feel */
+    .gallery-card {
+        border-radius: 10px;
+    }
+
+    /* Make back button easier to tap */
+    .back-button {
+        padding: 12px 18px;
+        font-size: 16px;
+    }
 }

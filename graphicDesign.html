@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graphic Design Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=DM+Serif+Text&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!--Needed for expand & center on click-->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<header class="header">
+    <h1>Graphic Design Portfolio</h1>
+    <p>Close-ups of my cheer graphics and promotional designs. Click to enlarge</p>
+</header>
+
+<main class="gallery">
+    <div class="gallery-card">
+        <img src="IMG_7044.jpg" class="gallery-img" alt="Become a World Champion Graphic">
+    </div>
+    <div class="gallery-card">
+        <img src="IMG_7045.jpg" class="gallery-img" alt="1 Day Until Tryouts Graphic">
+    </div>
+    <div class="gallery-card">
+        <img src="IMG_7046.jpg" class="gallery-img" alt="Who's Next Graphic">
+    </div>
+    <div class="gallery-card">
+        <img src="IMG_7047.jpg" class="gallery-img" alt="Phone Graphic">
+    </div>
+</main>
+
+<footer class="footer">
+    <a href="index.html" class="back-button">← Return Home</a>
+</footer>
+
+<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const images = document.querySelectorAll(".gallery-img");
+const closeBtn = document.querySelector(".close");
+
+images.forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "block";
+        lightboxImg.src = img.src;
+    });
+});
+
+closeBtn.onclick = function() {
+    lightbox.style.display = "none";
+};
+
+lightbox.onclick = function(e) {
+    if (e.target !== lightboxImg) {
+        lightbox.style.display = "none";
+    }
+};
+</script>
+
+</body>
+</html>
